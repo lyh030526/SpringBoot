@@ -1,8 +1,15 @@
 package com.dongyang.basicExample.dto;
 
+import com.dongyang.basicExample.entity.ArticleEntity;
+
 public class ArticleDTO {
     private String title;
     private String contents;
+
+    public ArticleEntity toEntity(){
+        return new ArticleEntity(null, title,contents);
+
+    }
 
     public String getContents() {
         return contents;
